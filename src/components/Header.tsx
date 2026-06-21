@@ -22,7 +22,7 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-brand-100/70 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-2.5">
         <Link href="/" className="flex items-center gap-2.5" aria-label={`${site.name} home`}>
-          <Logo id="logo-header" className="h-14 w-auto" />
+          <Logo priority className="h-12 w-auto" />
           <span className="flex flex-col leading-tight">
             <span className="text-lg font-extrabold tracking-tight text-brand-900">
               Ice Machine Repair
@@ -59,7 +59,7 @@ export default function Header() {
           </a>
           <a
             href={`tel:${site.phone.tel}`}
-            className="cta-glow inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-3 font-bold text-white transition-colors hover:bg-brand-700"
+            className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-3 font-bold text-white transition-colors hover:bg-brand-700"
           >
             <PhoneIcon className="h-[18px] w-[18px]" />
             <span className="hidden sm:inline">Call Now</span>

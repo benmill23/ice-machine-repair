@@ -72,19 +72,10 @@ export const site = {
     ],
   },
 
-  rates: {
-    standard: {
-      price: 140,
-      label: "Standard Service",
-      hours: "Monday – Friday, 8:00 AM – 5:00 PM",
-      featured: true,
-    },
-    overtime: {
-      price: 210,
-      label: "Overtime Service",
-      hours: "After hours, weekends & holidays (2 hour minimum)",
-      featured: false,
-    },
+  // Pricing is quote-only — no published hourly/flat rates. Every job is
+  // diagnosed and quoted up front, and the customer approves before work starts.
+  pricing: {
+    model: "quote-only" as const,
   },
 
   stats: [

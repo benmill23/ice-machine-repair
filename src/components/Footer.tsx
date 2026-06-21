@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-brand">
           <Link href="/" className="logo" aria-label={`${site.name} home`}>
-            <Logo id="logo-footer" className="h-16 w-auto" />
+            <Logo className="h-16 w-auto" />
             <div className="logo-text">
               <div className="company-name">{site.shortName}</div>
               <div className="tagline">Ice Machine Repair</div>
@@ -47,7 +47,7 @@ export default function Footer() {
           <h4>Company</h4>
           <ul className="footer-links">
             <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/#rates">Rates</Link></li>
+            <li><Link href="/#rates">Pricing</Link></li>
             <li><Link href="/#guarantee">Guarantee</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
