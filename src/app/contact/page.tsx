@@ -89,13 +89,13 @@ export default async function ContactPage({
           <div className="contact-form">
             {sent ? (
               <div>
-                <h2 style={{ fontFamily: "var(--font-serif), serif", fontSize: 26, color: "var(--navy-900)", marginBottom: 12 }}>
+                <h2 style={{ fontFamily: "var(--font-display), sans-serif", fontSize: 26, color: "var(--ink-900)", marginBottom: 12, letterSpacing: "-0.5px" }}>
                   Thanks — we got your request.
                 </h2>
                 <p style={{ color: "var(--text-muted)" }}>
                   We&apos;ll be in touch shortly. If your ice machine is down
                   right now, call us at{" "}
-                  <a href={`tel:${site.phone.tel}`} style={{ color: "var(--navy-700)", fontWeight: 600 }}>
+                  <a href={`tel:${site.phone.tel}`} style={{ color: "var(--ice-700)", fontWeight: 600 }}>
                     {site.phone.display}
                   </a>{" "}
                   for the fastest response.
