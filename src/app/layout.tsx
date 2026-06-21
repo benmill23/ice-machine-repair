@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Archivo, Public_Sans } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { localBusinessSchema } from "@/lib/seo";
@@ -7,27 +7,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 
-// Display — characterful grotesque for headlines.
-const display = Bricolage_Grotesque({
+// Headings — solid, professional, grounded (not trendy).
+const display = Archivo({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "600", "700", "800"],
+  weight: ["600", "700", "800"],
   display: "swap",
 });
 
-// Body — refined, highly legible grotesque.
-const body = Hanken_Grotesk({
+// Body — clean, trustworthy, highly legible.
+const body = Public_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-// Mono — technical kickers, spec labels, stat units (the "engineered" signal).
-const mono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -74,10 +66,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${display.variable} ${body.variable} ${mono.variable}`}
-    >
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>
         <JsonLd data={localBusinessSchema()} />
         <Header />

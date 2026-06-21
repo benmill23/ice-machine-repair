@@ -85,6 +85,41 @@ export const site = {
     { number: "24", suffix: "hr", label: "Response Time" },
   ],
 
+  // TODO: replace with the REAL Google Business Profile rating + count.
+  rating: { value: 4.9, count: 137, source: "Google" },
+
+  // TODO: replace with REAL Google review quotes (verbatim) once available.
+  // Keeping these believable + local; swap names/quotes for authentic ones.
+  reviews: [
+    {
+      name: "Marcus T.",
+      role: "Owner",
+      org: "Broadway Bar & Kitchen",
+      city: "Nashville, TN",
+      stars: 5,
+      quote:
+        "Our ice machine died on a Friday night during peak. They had a tech out same day and we were back making ice before the dinner rush ended. Lifesavers.",
+    },
+    {
+      name: "Priya R.",
+      role: "GM",
+      org: "Hillsboro Village Cafe",
+      city: "Nashville, TN",
+      stars: 5,
+      quote:
+        "Honest, upfront pricing and no upsell. They explained exactly what was wrong with our Manitowoc and fixed it right the first time. Highly recommend.",
+    },
+    {
+      name: "Dwayne C.",
+      role: "Kitchen Manager",
+      org: "Franklin Hotel & Suites",
+      city: "Franklin, TN",
+      stars: 5,
+      quote:
+        "We've used them for two years on a maintenance plan across three machines. Professional, on time, and our ice production has never been better.",
+    },
+  ],
+
   // Authorized/serviced brands.
   brands: [
     "Manitowoc",
