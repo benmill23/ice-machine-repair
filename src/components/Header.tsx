@@ -38,7 +38,7 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-semibold text-ink-700 transition-colors hover:text-brand-600"
+              className="text-sm font-semibold text-ink-700 transition-colors hover:text-ice-600"
             >
               {l.label}
             </Link>
@@ -59,7 +59,7 @@ export default function Header() {
           </a>
           <a
             href={`tel:${site.phone.tel}`}
-            className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-3 font-bold text-white transition-colors hover:bg-brand-700"
+            className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-brand-600 to-ice-500 px-4 py-3 font-bold text-white transition hover:brightness-[1.07]"
           >
             <PhoneIcon className="h-[18px] w-[18px]" />
             <span className="hidden sm:inline">Call Now</span>
@@ -83,7 +83,7 @@ export default function Header() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block py-3 text-base font-semibold text-ink-700 hover:text-brand-600"
+              className="block py-3 text-base font-semibold text-ink-700 hover:text-ice-600"
             >
               {l.label}
             </Link>
