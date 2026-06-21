@@ -23,7 +23,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-brand-50 px-6 pt-28 pb-24 md:pt-32 md:pb-28">
-        <div className="relative mx-auto grid max-w-[1200px] items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div className="text-center lg:text-left">
             <span className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-white px-4 py-1.5 text-sm font-semibold text-brand-700 shadow-soft">
               <span className="h-2 w-2 rounded-full bg-success" />

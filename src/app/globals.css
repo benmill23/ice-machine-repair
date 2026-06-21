@@ -71,11 +71,11 @@
   --radius: 16px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* NOTE: do NOT add an unlayered `* { margin:0; padding:0 }` reset here.
+   Tailwind v4 puts every utility inside @layer, and unlayered rules win over
+   any @layer — so a global reset like that silently nukes px-/pt-/p-/m-/mx-
+   utilities everywhere. Tailwind's Preflight already zeroes default margins,
+   padding, and sets box-sizing: border-box. */
 
 html {
   scroll-behavior: smooth;
