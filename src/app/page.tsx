@@ -12,8 +12,9 @@ import {
   PinIcon,
   BoltIcon,
   SnowflakeIcon,
+  GoogleG,
+  serviceIcons,
 } from "@/components/icons";
-import ServiceCard from "@/components/ServiceCard";
 import BrandsSection from "@/components/BrandsSection";
 import RatesSection from "@/components/RatesSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
@@ -44,11 +45,17 @@ function Stars({ n = 5 }: { n?: number }) {
 
 export default function Home() {
   const { rating, reviews } = site;
+  const trust = [
+    { ic: <ShieldCheckIcon />, big: "Licensed & Insured", sub: "Certified refrigeration techs" },
+    { ic: <BoltIcon />, big: "Same-Day Service", sub: "Emergency dispatch, 7 days" },
+    { ic: <SnowflakeIcon />, big: "All Major Brands", sub: "Manitowoc, Scotsman, Hoshizaki…" },
+    { ic: <StarIcon />, big: `${rating.value}★ on Google`, sub: `${rating.count}+ verified reviews` },
+  ];
 
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white px-6 pt-28 pb-16 md:pt-32 md:pb-20">
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white px-6 pt-28 pb-20 md:pt-32 md:pb-24">
         <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
           {/* Copy */}
           <div className="reveal text-center lg:text-left">
@@ -60,18 +67,18 @@ export default function Home() {
             </div>
 
             <p className="mt-5 text-sm font-bold uppercase tracking-[1.5px] text-brand-700">
-              Same-Day · Licensed &amp; Insured · Quote-Only
+              Family-Owned · Licensed &amp; Insured · Quote-Only
             </p>
 
-            <h1 className="mt-3 text-4xl font-extrabold leading-[1.06] tracking-tight text-ink-900 sm:text-5xl lg:text-[3.3rem]">
-              Commercial Ice Machine Repair in Nashville —{" "}
-              <span className="text-brand-600">back up today.</span>
+            <h1 className="mt-3 text-4xl font-extrabold leading-[1.05] tracking-tight text-ink-900 sm:text-5xl lg:text-[3.3rem]">
+              Commercial Ice Machine Repair in Nashville,{" "}
+              <span className="u-accent">back up today.</span>
             </h1>
 
             <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-ink-600 lg:mx-0">
-              Fast, reliable commercial ice machine repair across Greater
-              Nashville. Every major brand, licensed &amp; insured technicians,
-              and honest quote-only pricing — backed by a 60-day guarantee.
+              Fast, reliable repair for every commercial brand across Greater
+              Nashville — from a local team you can trust. Honest quotes, clean
+              work, and a 60-day guarantee on every job.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
@@ -97,12 +104,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Photo */}
+          {/* Photo — real van */}
           <div className="reveal-2 relative">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-ink-200 bg-ink-100 shadow-lift">
               <Image
-                src="/photos/hero.jpg"
-                alt="1st Choice technician repairing a commercial ice machine in Nashville, TN"
+                src="/1st-choice-appliance-truck.webp"
+                alt="1st Choice service van — commercial ice machine repair in Nashville, TN"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -123,53 +130,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== TRUST STRIP ===== */}
-      <div className="trust-strip">
-        <div className="trust-item">
-          <Stars />
-          <span>
-            {rating.value}/5 on {rating.source}
-          </span>
-        </div>
-        <div className="trust-item">
-          <ShieldCheckIcon />
-          Licensed &amp; Insured
-        </div>
-        <div className="trust-item">
-          <BoltIcon />
-          Same-Day Emergency Service
-        </div>
-        <div className="trust-item">
-          <SnowflakeIcon />
-          All Major Brands Serviced
-        </div>
-        <div className="trust-item">
-          <CheckIcon />
-          Quote-Only · No Hidden Fees
-        </div>
-      </div>
-
-      {/* ===== SERVICES ===== */}
-      <section className="services" id="services">
+      {/* ===== BLUE SPLASH: trust + services ===== */}
+      <section className="blueband" id="services">
         <div className="container">
           <div className="section-header">
-            <span className="section-label">What We Do</span>
-            <h2 className="section-title">Complete Ice Machine Services</h2>
+            <span className="section-label">Why 1st Choice</span>
+            <h2 className="section-title">Ice Machine Problems? We&apos;ve Got You Covered.</h2>
             <p className="section-subtitle">
-              From emergency repairs to preventive maintenance, we keep your ice
-              machines running at peak performance.
+              One local team for every commercial ice machine repair, cleaning,
+              and maintenance job in Middle Tennessee.
             </p>
           </div>
-          <div className="services-grid">
-            {services.map((s) => (
-              <ServiceCard key={s.slug} service={s} />
+
+          <div className="trust-cols">
+            {trust.map((t) => (
+              <div className="trust-col" key={t.big}>
+                <div className="ic">{t.ic}</div>
+                <div className="big">{t.big}</div>
+                <div className="sub">{t.sub}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bb-grid">
+            {services.slice(0, 6).map((s) => (
+              <Link key={s.slug} href={`/services/${s.slug}`} className="bb-card">
+                <div className="bb-ic">{serviceIcons[s.icon]}</div>
+                <h3>{s.name}</h3>
+                <p>{s.shortDescription}</p>
+                <span className="bb-more">Learn more →</span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
       {/* ===== PROOF / PHOTOS ===== */}
-      <section className="section section-ice">
+      <section className="section section-light">
         <div className="container">
           <div className="section-header">
             <span className="section-label">Real Work</span>
@@ -197,46 +194,57 @@ export default function Home() {
 
       <BrandsSection />
 
-      {/* ===== REVIEWS ===== */}
+      {/* ===== REVIEWS (Google style) ===== */}
       <section className="section section-light" id="reviews">
         <div className="container">
           <div className="section-header">
             <span className="section-label">Reviews</span>
             <h2 className="section-title">What Nashville Businesses Say</h2>
-            <p className="section-subtitle">
-              <span className="inline-flex items-center gap-2 align-middle">
-                <Stars />
-              </span>{" "}
-              {rating.value} average from {rating.count}+ verified {rating.source}{" "}
-              reviews.
+            <p className="section-subtitle inline-flex flex-wrap items-center justify-center gap-2">
+              <Stars /> {rating.value} average from {rating.count}+ verified{" "}
+              {rating.source} reviews
             </p>
           </div>
           <div className="reviews-grid">
             {reviews.map((r) => (
               <div className="review-card" key={r.name}>
-                <Stars n={r.stars} />
-                <p className="quote">“{r.quote}”</p>
-                <div className="who">
-                  <div className="avatar">{r.name.charAt(0)}</div>
+                <GoogleG className="gmark" />
+                <div className="head">
+                  <div className="avatar" style={{ background: r.color }}>
+                    {r.name.charAt(0)}
+                  </div>
                   <div>
-                    <div className="name">{r.name}</div>
-                    <div className="meta">
-                      {r.org} · {r.city}
+                    <div className="name">
+                      {r.name} <Stars n={r.stars} />
+                    </div>
+                    <div className="when">
+                      {r.org} · {r.when}
                     </div>
                   </div>
                 </div>
+                <p className="quote">{r.quote}</p>
+                <a
+                  className="more"
+                  href={site.social.google || "#"}
+                  target={site.social.google ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                >
+                  Read Full Review on Google
+                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== SERVICE AREA + MAP ===== */}
+      {/* ===== COUNTIES WE PROUDLY SERVE ===== */}
       <section className="section section-ice">
         <div className="area-grid">
           <div>
             <span className="section-label">Service Area</span>
-            <h2 className="section-title">Serving Greater Nashville</h2>
+            <h2 className="section-title">
+              Counties We <span className="u-accent">Proudly Serve</span>
+            </h2>
             <p style={{ fontSize: 17, color: "var(--ink-600)", lineHeight: 1.75, maxWidth: 480 }}>
               Family-owned and based in Nashville, we dispatch across roughly a{" "}
               {site.serviceRadiusMiles}-mile radius of the metro — including these

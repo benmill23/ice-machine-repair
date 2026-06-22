@@ -36,7 +36,11 @@
   --color-ink-900: #0f1b2d;
   --color-navy: #0c1a30;
 
-  /* Review gold + success */
+  /* Brand yellow (from the trucks) + review gold + success */
+  --color-yellow-300: #ffd84d;
+  --color-yellow-400: #ffc733;
+  --color-yellow-500: #f7b500;
+  --color-yellow-600: #d99700;
   --color-gold: #f59e0b;
   --color-success: #16a34a;
   --color-paper: #f4f8fc;
@@ -72,6 +76,10 @@
   --ink-900: #0f1b2d;
   --navy: #0c1a30;
 
+  --yellow-300: #ffd84d;
+  --yellow-400: #ffc733;
+  --yellow-500: #f7b500;
+  --yellow-600: #d99700;
   --gold: #f59e0b;
   --success: #16a34a;
   --paper: #f4f8fc;
@@ -161,6 +169,13 @@ a { color: inherit; }
 
 .btn-white { background: #fff; color: var(--brand-700); }
 .btn-white:hover { transform: translateY(-1px); box-shadow: var(--shadow-card); }
+
+/* Yellow CTA — high-contrast on blue (truck-brand accent) */
+.btn-accent { background: var(--yellow-400); color: var(--ink-900); box-shadow: 0 8px 22px -8px rgba(247, 181, 0, 0.7); }
+.btn-accent:hover { background: var(--yellow-300); transform: translateY(-1px); box-shadow: 0 14px 30px -10px rgba(247, 181, 0, 0.8); }
+
+/* Yellow underline accent under a heading word */
+.u-accent { box-shadow: inset 0 -0.32em 0 rgba(255, 199, 51, 0.55); }
 
 .read-more {
   display: inline-flex;
@@ -330,27 +345,134 @@ a { color: inherit; }
 /* =========================================================================
    REVIEWS
    ========================================================================= */
-.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .review-card {
-  background: #fff;
-  border: 1px solid var(--ink-200);
-  border-radius: var(--radius);
-  padding: 28px;
-  box-shadow: var(--shadow-soft);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  position: relative;
+  background: var(--ink-50);
+  border: 1px solid var(--ink-100);
+  border-radius: 18px;
+  padding: 26px 26px 24px;
 }
-.review-card .quote { font-size: 15.5px; color: var(--ink-700); line-height: 1.72; flex: 1; }
-.review-card .who { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--ink-100); padding-top: 16px; }
+.review-card .gmark { position: absolute; top: 22px; right: 22px; width: 22px; height: 22px; }
+.review-card .head { display: flex; align-items: center; gap: 13px; padding-right: 30px; }
 .review-card .avatar {
-  width: 42px; height: 42px; border-radius: 50%;
-  background: var(--brand-600); color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 800; font-size: 16px; flex-shrink: 0;
+  width: 46px; height: 46px; border-radius: 50%;
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 18px; flex-shrink: 0;
 }
-.review-card .name { font-weight: 700; color: var(--ink-900); font-size: 14.5px; }
-.review-card .meta { font-size: 12.5px; color: var(--ink-500); }
+.review-card .name { display: flex; align-items: center; gap: 9px; font-weight: 700; color: var(--ink-900); font-size: 16px; flex-wrap: wrap; }
+.review-card .name .stars svg { width: 15px; height: 15px; }
+.review-card .when { font-size: 13px; color: var(--ink-400); margin-top: 3px; }
+.review-card .quote { margin-top: 16px; font-size: 15px; color: var(--ink-700); line-height: 1.7; }
+.review-card .more { display: inline-block; margin-top: 14px; color: var(--brand-600); font-weight: 600; font-size: 14.5px; text-decoration: none; }
+.review-card .more:hover { text-decoration: underline; }
+
+/* =========================================================================
+   BLUE SPLASH BAND (services / trust) with angled transitions
+   ========================================================================= */
+.blueband {
+  position: relative;
+  background: linear-gradient(160deg, var(--brand-700) 0%, var(--brand-800) 100%);
+  color: #fff;
+  padding: 116px 24px;
+  clip-path: polygon(0 38px, 100% 0, 100% 100%, 0 calc(100% - 38px));
+}
+.blueband .section-title { color: #fff; }
+.blueband .section-subtitle { color: rgba(255, 255, 255, 0.82); }
+.blueband .section-label { color: var(--yellow-400); }
+.blueband .section-label::before { background: var(--yellow-400); }
+
+.trust-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1040px;
+  margin: 0 auto 8px;
+}
+.trust-col { text-align: center; padding: 8px; }
+.trust-col .ic {
+  width: 56px; height: 56px; margin: 0 auto 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex; align-items: center; justify-content: center;
+}
+.trust-col .ic svg { width: 26px; height: 26px; color: var(--yellow-400); }
+.trust-col .big { font-family: var(--font-display); font-size: 17px; font-weight: 800; color: #fff; letter-spacing: -0.2px; }
+.trust-col .sub { font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin-top: 4px; line-height: 1.5; }
+
+/* Blue-band service cards (translucent on blue) */
+.bb-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 1100px; margin: 56px auto 0; }
+.bb-card {
+  display: block;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 26px 24px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+.bb-card:hover { background: #fff; border-color: #fff; transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+.bb-card .bb-ic {
+  width: 50px; height: 50px; border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12); color: var(--yellow-400);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+  transition: all 0.25s ease;
+}
+.bb-card .bb-ic svg { width: 24px; height: 24px; color: currentColor; }
+.bb-card:hover .bb-ic { background: var(--brand-600); color: #fff; }
+.bb-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.2px; }
+.bb-card:hover h3 { color: var(--ink-900); }
+.bb-card p { font-size: 14px; line-height: 1.6; color: rgba(255, 255, 255, 0.78); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.bb-card:hover p { color: var(--ink-500); }
+.bb-card .bb-more { display: inline-block; margin-top: 13px; font-size: 13.5px; font-weight: 700; color: var(--yellow-400); }
+.bb-card:hover .bb-more { color: var(--brand-600); }
+
+/* =========================================================================
+   FLOATING CTA (hovers over all content)
+   ========================================================================= */
+.floating-cta {
+  position: fixed;
+  z-index: 60;
+  right: 22px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--brand-700), var(--brand-800));
+  box-shadow: 0 18px 44px -12px rgba(15, 27, 45, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  animation: cta-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.floating-cta .fc-text { color: #fff; line-height: 1.15; }
+.floating-cta .fc-text .t1 { display: block; font-size: 12px; color: rgba(255, 255, 255, 0.7); font-weight: 600; }
+.floating-cta .fc-text .t2 { display: block; font-size: 16px; font-weight: 800; letter-spacing: -0.3px; }
+.floating-cta .fc-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--yellow-400); color: var(--ink-900);
+  font-weight: 800; font-size: 14.5px;
+  padding: 11px 16px; border-radius: 999px; text-decoration: none;
+  transition: background 0.2s ease;
+}
+.floating-cta .fc-btn:hover { background: var(--yellow-300); }
+.floating-cta .fc-btn svg { width: 17px; height: 17px; }
+.floating-cta .fc-close {
+  position: absolute; top: -8px; right: -8px;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--ink-800); color: #fff; border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.floating-cta .fc-close svg { width: 13px; height: 13px; }
+@keyframes cta-pop { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .floating-cta { animation: none; } }
+@media (max-width: 600px) {
+  .floating-cta { left: 12px; right: 12px; bottom: 12px; justify-content: space-between; padding: 11px 12px 11px 16px; }
+  .floating-cta .fc-text .t1 { font-size: 11px; }
+  .floating-cta .fc-text .t2 { font-size: 14.5px; }
+}
 
 /* =========================================================================
    SERVICE AREA + MAP
@@ -578,7 +700,8 @@ a.chip:hover { background: var(--brand-600); color: #fff; border-color: var(--br
    RESPONSIVE
    ========================================================================= */
 @media (max-width: 1024px) {
-  .services-grid, .tile-grid, .reviews-grid, .proof-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid, .tile-grid, .reviews-grid, .proof-grid, .bb-grid { grid-template-columns: repeat(2, 1fr); }
+  .trust-cols { grid-template-columns: repeat(2, 1fr); gap: 28px 18px; }
   .guarantee-content { grid-template-columns: 1fr; text-align: center; gap: 44px; }
   .guarantee-visual { order: -1; }
   .guarantee-point { justify-content: flex-start; text-align: left; }
@@ -590,8 +713,9 @@ a.chip:hover { background: var(--brand-600); color: #fff; border-color: var(--br
   .section, .services, .guarantee, .cta, .brands { padding-left: 20px; padding-right: 20px; }
   .section { padding-top: 68px; padding-bottom: 68px; }
   .services, .guarantee, .brands { padding-top: 72px; padding-bottom: 72px; }
-  .services-grid, .tile-grid, .reviews-grid, .contact-grid, .area-list { grid-template-columns: 1fr; }
+  .services-grid, .tile-grid, .reviews-grid, .contact-grid, .area-list, .bb-grid { grid-template-columns: 1fr; }
   .proof-grid { grid-template-columns: 1fr; }
+  .blueband { clip-path: polygon(0 24px, 100% 0, 100% calc(100% - 24px), 0 100%); padding: 90px 20px; }
   .section-header { margin-bottom: 40px; }
   .footer-content { grid-template-columns: 1fr; text-align: center; }
   .footer-brand p { margin-left: auto; margin-right: auto; }

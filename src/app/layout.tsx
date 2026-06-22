@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import { localBusinessSchema } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
 import JsonLd from "@/components/JsonLd";
 
 // Headings — solid, professional, grounded (not trendy).
@@ -72,6 +73,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingCTA />
       </body>
     </html>
   );

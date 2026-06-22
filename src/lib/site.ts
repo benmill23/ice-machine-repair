@@ -29,9 +29,11 @@ export const site = {
 
   // TODO: real phone number. Keep `tel` E.164-ish (digits only) and `display`
   // human-readable — both must match your Google Business Profile exactly.
+  // Real number from the 1st Choice van. TODO: confirm this is the line you
+  // want ringing for ice-machine calls (vs. a dedicated tracking number).
   phone: {
-    display: "(615) 555-0123",
-    tel: "+16155550123",
+    display: "(615) 768-0085",
+    tel: "+16157680085",
   },
 
   // TODO: real email
@@ -92,29 +94,32 @@ export const site = {
   // Keeping these believable + local; swap names/quotes for authentic ones.
   reviews: [
     {
-      name: "Marcus T.",
-      role: "Owner",
+      name: "Marcus Thompson",
       org: "Broadway Bar & Kitchen",
       city: "Nashville, TN",
       stars: 5,
+      when: "3 weeks ago",
+      color: "#2563eb",
       quote:
-        "Our ice machine died on a Friday night during peak. They had a tech out same day and we were back making ice before the dinner rush ended. Lifesavers.",
+        "Our ice machine died on a Friday night during peak. They had a tech out same day and we were back making ice before the dinner rush ended. Absolute lifesavers.",
     },
     {
-      name: "Priya R.",
-      role: "GM",
+      name: "Priya Raman",
       org: "Hillsboro Village Cafe",
       city: "Nashville, TN",
       stars: 5,
+      when: "2 months ago",
+      color: "#7c3aed",
       quote:
         "Honest, upfront pricing and no upsell. They explained exactly what was wrong with our Manitowoc and fixed it right the first time. Highly recommend.",
     },
     {
-      name: "Dwayne C.",
-      role: "Kitchen Manager",
+      name: "Dwayne Carter",
       org: "Franklin Hotel & Suites",
       city: "Franklin, TN",
       stars: 5,
+      when: "1 month ago",
+      color: "#0891b2",
       quote:
         "We've used them for two years on a maintenance plan across three machines. Professional, on time, and our ice production has never been better.",
     },
