@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo, Public_Sans } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
@@ -32,6 +32,17 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
+  category: "Local Business",
+  // Keep phone numbers tappable on iOS but stop Safari auto-linking junk.
+  formatDetection: { telephone: true, email: false, address: false },
+  appleWebApp: {
+    capable: true,
+    title: site.shortName,
+    statusBarStyle: "default",
+  },
   keywords: [
     "ice machine repair Nashville",
     "commercial ice machine repair",
@@ -61,6 +72,13 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#2563eb",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
