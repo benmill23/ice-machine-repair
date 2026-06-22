@@ -110,7 +110,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-display), sans-serif; }
-a { color: inherit; }
+/* NOTE: don't add an unlayered `a { color: inherit }` — it beats Tailwind's
+   @layer utilities and silently overrides text-white / text-* on links.
+   Preflight already makes anchors inherit color by default. */
 
 .container { max-width: 1200px; margin: 0 auto; position: relative; }
 
