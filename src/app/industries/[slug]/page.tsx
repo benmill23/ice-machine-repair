@@ -29,7 +29,7 @@ export async function generateMetadata({
   if (!industry) return {};
   return pageMetadata({
     title: `Ice Machine Repair for ${industry.name} | Nashville`,
-    description: `Commercial ice machine repair, maintenance, and installation for ${industry.name.toLowerCase()} across the Nashville, TN metro. Fast response, 60-day guarantee.`,
+    description: `Commercial ice machine repair, maintenance, and installation for ${industry.name.toLowerCase()} across the Nashville, TN metro. Fast response from a local team.`,
     path: `/industries/${industry.slug}`,
   });
 }
@@ -97,8 +97,8 @@ export default async function IndustryPage({
           </p>
           <p>
             We service every major commercial brand and machine type, carry
-            common parts for same-day repairs, and back our work with a 60-day
-            workmanship guarantee. Whether you need an emergency fix or a
+            common parts for same-day repairs, and fix it right the first time.
+            Whether you need an emergency fix or a
             recurring maintenance plan to stay ahead of breakdowns, we tailor
             the service to how your operation actually uses ice.
           </p>

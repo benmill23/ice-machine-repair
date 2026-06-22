@@ -34,7 +34,7 @@ export async function generateMetadata({
   if (!loc) return {};
   return pageMetadata({
     title: `Ice Machine Repair in ${loc.name}, TN`,
-    description: `Fast commercial ice machine repair, cleaning, and installation in ${loc.name}, ${loc.county}. Licensed, insured, all major brands, 60-day guarantee.`,
+    description: `Fast commercial ice machine repair, cleaning, and installation in ${loc.name}, ${loc.county}. Licensed, insured, all major brands.`,
     path: `/service-areas/${loc.slug}`,
   });
 }
@@ -108,8 +108,8 @@ export default async function LocationPage({
           </p>
           <p>
             We service all major commercial brands, carry common parts on our
-            trucks for same-day repairs, and back our work with a 60-day
-            workmanship guarantee. Whether you run a restaurant, bar, hotel,
+            trucks for same-day repairs, and fix it right the first time.
+            Whether you run a restaurant, bar, hotel,
             convenience store, or healthcare facility in {loc.name}, we keep
             your ice production running.
           </p>

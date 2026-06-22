@@ -1,14 +1,13 @@
 import { site } from "@/lib/site";
 import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import GuaranteeSection from "@/components/GuaranteeSection";
 import BrandsSection from "@/components/BrandsSection";
 import CTASection from "@/components/CTASection";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = pageMetadata({
   title: "About Us",
-  description: `${site.name} is a family-owned, licensed and insured commercial ice machine repair company serving the Nashville, TN metro with fast service and guaranteed workmanship.`,
+  description: `${site.name} is a family-owned, licensed and insured commercial ice machine repair company serving the Nashville, TN metro with fast, reliable service and honest, up-front pricing.`,
   path: "/about",
 });
 
@@ -62,13 +61,12 @@ export default function AboutPage() {
             <li>Licensed &amp; insured refrigeration technicians</li>
             <li>20+ years of commercial ice machine experience</li>
             <li>Authorized service for all major brands</li>
-            <li>60-day workmanship guarantee on repairs</li>
+            <li>Same-day &amp; emergency dispatch</li>
             <li>Transparent, up-front pricing</li>
           </ul>
         </div>
       </article>
 
-      <GuaranteeSection />
       <BrandsSection />
       <CTASection />
     </>

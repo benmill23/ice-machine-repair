@@ -17,13 +17,12 @@ import {
 } from "@/components/icons";
 import BrandsSection from "@/components/BrandsSection";
 import RatesSection from "@/components/RatesSection";
-import GuaranteeSection from "@/components/GuaranteeSection";
 import CTASection from "@/components/CTASection";
 
 const heroBadges = [
   "Licensed & Insured",
   "Same-Day Service",
-  "60-Day Guarantee",
+  "Free Estimates",
   "All Major Brands",
 ];
 
@@ -78,7 +77,7 @@ export default function Home() {
             <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-ink-600 lg:mx-0">
               Fast, reliable repair for every commercial brand across Greater
               Nashville — from a local team you can trust. Honest quotes, clean
-              work, and a 60-day guarantee on every job.
+              work, and the job done right the first time.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
@@ -118,12 +117,12 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-5 left-5 hidden items-center gap-3 rounded-xl border border-ink-200 bg-white p-3.5 pr-5 shadow-card sm:flex">
               <div className="flex h-12 w-12 flex-col items-center justify-center rounded-lg bg-brand-600 leading-none text-white">
-                <span className="text-lg font-extrabold">60</span>
-                <span className="text-[8px] font-bold uppercase tracking-wide">Day</span>
+                <span className="text-lg font-extrabold">{rating.value}</span>
+                <span className="text-[8px] font-bold uppercase tracking-wide">Google</span>
               </div>
               <div className="leading-tight">
-                <div className="text-sm font-bold text-ink-900">Workmanship Guarantee</div>
-                <div className="text-xs text-ink-500">No charge on misdiagnosis</div>
+                <div className="text-sm font-bold text-ink-900">Rated {rating.value} on Google</div>
+                <div className="text-xs text-ink-500">{rating.count}+ verified reviews</div>
               </div>
             </div>
           </div>
@@ -303,7 +302,6 @@ export default function Home() {
       </section>
 
       <RatesSection />
-      <GuaranteeSection />
       <CTASection />
     </>
   );

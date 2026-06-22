@@ -28,7 +28,7 @@ export async function generateMetadata({
   if (!problem) return {};
   return pageMetadata({
     title: `${problem.name}? Causes & Repair | Nashville`,
-    description: `${problem.quickInfo} Fast commercial ice machine repair across the Nashville, TN metro with a 60-day guarantee.`,
+    description: `${problem.quickInfo} Fast commercial ice machine repair across the Nashville, TN metro by a trusted local team.`,
     path: `/problems/${problem.slug}`,
   });
 }
@@ -109,8 +109,8 @@ export default async function ProblemPage({
             We start with a real diagnosis — testing the water system,
             refrigeration circuit, electrical components, and controls — rather
             than swapping parts and hoping. Once we&apos;ve confirmed the root
-            cause, we give you a clear price before doing the work, and back the
-            repair with our 60-day workmanship guarantee.
+            cause, we give you a clear price before doing the work, and fix it
+            right the first time.
           </p>
           <p>
             A {problem.searchPhrase} often gets worse if it&apos;s left alone —

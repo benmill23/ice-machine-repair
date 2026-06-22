@@ -28,7 +28,7 @@ export async function generateMetadata({
   if (!eq) return {};
   return pageMetadata({
     title: `${eq.name} Repair & Service | Nashville`,
-    description: `${eq.blurb} Expert commercial repair and maintenance across the Nashville, TN metro with a 60-day guarantee.`,
+    description: `${eq.blurb} Expert commercial repair and maintenance across the Nashville, TN metro by a trusted local team.`,
     path: `/equipment/${eq.slug}`,
   });
 }
@@ -96,8 +96,8 @@ export default async function EquipmentPage({
           </p>
           <p>
             We service every major brand of {lower}, carry common parts for
-            same-day repairs, and back our work with a 60-day workmanship
-            guarantee. Beyond repair, scheduled cleaning and descaling keeps
+            same-day repairs, and fix it right the first time. Beyond repair,
+            scheduled cleaning and descaling keeps
             this equipment producing clean, food-safe ice and prevents the scale
             buildup that causes most breakdowns.
           </p>

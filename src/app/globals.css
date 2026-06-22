@@ -452,12 +452,12 @@ a { color: inherit; }
 .floating-cta .fc-text .t2 { display: block; font-size: 16px; font-weight: 800; letter-spacing: -0.3px; }
 .floating-cta .fc-btn {
   display: inline-flex; align-items: center; gap: 7px;
-  background: var(--yellow-400); color: var(--ink-900);
+  background: var(--brand-600); color: #fff;
   font-weight: 800; font-size: 14.5px;
   padding: 11px 16px; border-radius: 999px; text-decoration: none;
   transition: background 0.2s ease;
 }
-.floating-cta .fc-btn:hover { background: var(--yellow-300); }
+.floating-cta .fc-btn:hover { background: var(--brand-500); }
 .floating-cta .fc-btn svg { width: 17px; height: 17px; }
 .floating-cta .fc-close {
   position: absolute; top: -8px; right: -8px;

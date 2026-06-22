@@ -16,7 +16,7 @@ export const site = {
   shortDescription:
     "Fast, reliable commercial ice machine repair, maintenance, and installation for Nashville-area businesses.",
   description:
-    "1st Choice Ice Machine Repair provides fast, reliable commercial ice machine repair, preventive maintenance, and installation across the Nashville, TN metro area. Licensed, insured, and backed by a 60-day workmanship guarantee.",
+    "1st Choice Ice Machine Repair provides fast, reliable commercial ice machine repair, preventive maintenance, and installation across the Nashville, TN metro area. Licensed, insured, and locally owned.",
 
   // Sister brand (shared ownership / cross-referral).
   parent: {
@@ -83,7 +83,7 @@ export const site = {
   stats: [
     { number: "20", suffix: "+", label: "Years Experience" },
     { number: "5K", suffix: "+", label: "Repairs Completed" },
-    { number: "60", suffix: "", label: "Day Guarantee" },
+    { number: "7", suffix: "-Day", label: "Availability" },
     { number: "24", suffix: "hr", label: "Response Time" },
   ],
 

@@ -48,7 +48,7 @@ export default function Footer() {
           <ul className="footer-links">
             <li><Link href="/about">About Us</Link></li>
             <li><Link href="/#rates">Pricing</Link></li>
-            <li><Link href="/#guarantee">Guarantee</Link></li>
+            <li><Link href="/#reviews">Reviews</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>

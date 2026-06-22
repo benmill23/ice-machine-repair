@@ -31,9 +31,9 @@ export const services: Service[] = [
     title: "Commercial Ice Machine Repair",
     icon: "wrench",
     shortDescription:
-      "Expert repair for every type of commercial ice machine — cubers, nugget, and flake — from all major brands, backed by a 60-day guarantee.",
+      "Expert repair for every type of commercial ice machine — cubers, nugget, and flake — from all major brands, by a trusted local team.",
     intro:
-      "Commercial ice machines are workhorses, but heavy duty cycles, hard water, and round-the-clock demand take their toll. We diagnose and repair every class of commercial ice machine — modular cubers, undercounter units, nugget and flake makers — across all major brands, and back the work with a 60-day workmanship guarantee.",
+      "Commercial ice machines are workhorses, but heavy duty cycles, hard water, and round-the-clock demand take their toll. We diagnose and repair every class of commercial ice machine — modular cubers, undercounter units, nugget and flake makers — across all major brands, and get it fixed right the first time.",
     sections: [
       {
         heading: "Repairs for every machine and brand",
@@ -54,7 +54,7 @@ export const services: Service[] = [
       "All commercial brands and machine types serviced",
       "Trucks stocked with common OEM parts",
       "Root-cause diagnosis with up-front pricing",
-      "60-day workmanship guarantee on every repair",
+      "Same-day service on most repairs",
     ],
     faqs: [
       {
@@ -68,9 +68,9 @@ export const services: Service[] = [
           "It depends on the failure, but we always diagnose first and give you a clear price before doing the work. Our standard service rate applies during business hours, with an overtime rate for after-hours and weekend emergency calls.",
       },
       {
-        question: "Do you guarantee your repairs?",
+        question: "Do you stand behind your repairs?",
         answer:
-          "Yes. Every repair is backed by a 60-day workmanship guarantee. If the same issue returns within that window, we make it right.",
+          "Absolutely. We diagnose the real root cause and fix it right the first time — and if something isn't right, we make it right.",
       },
     ],
   },
@@ -103,7 +103,7 @@ export const services: Service[] = [
       "Fast emergency response across Greater Nashville",
       "Trucks stocked with common OEM parts",
       "Most repairs completed same day",
-      "60-day workmanship guarantee on the repair",
+      "Up-front pricing — no surprise charges",
     ],
     faqs: [
       {
@@ -195,7 +195,7 @@ export const services: Service[] = [
       "Water, drain, electrical, and filtration setup",
       "Manufacturer startup procedure followed",
       "Installation documented for warranty",
-      "90-day guarantee on new installations",
+      "Clean, code-compliant water & drain hookups",
     ],
     faqs: [
       {
@@ -204,9 +204,9 @@ export const services: Service[] = [
           "Absolutely. We'll assess your volume, available space, ice type, and budget, then recommend the right capacity so you're not under- or over-buying.",
       },
       {
-        question: "Is the installation guaranteed?",
+        question: "Do you handle the full installation?",
         answer:
-          "Yes. We guarantee our installations are free from refrigeration leaks or installation errors for 90 days.",
+          "Yes. We handle water, drain, electrical, and filtration setup, follow the manufacturer startup procedure, and document the install for your warranty.",
       },
     ],
   },

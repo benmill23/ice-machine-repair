@@ -28,7 +28,7 @@ export async function generateMetadata({
   if (!brand) return {};
   return pageMetadata({
     title: `${brand.name} Ice Machine Repair in Nashville, TN`,
-    description: `Expert ${brand.name} commercial ice machine repair across the Nashville metro. We service ${brand.commonModels.slice(0, 2).join(" and ")} and more — fast, with a 60-day guarantee.`,
+    description: `Expert ${brand.name} commercial ice machine repair across the Nashville metro. We service ${brand.commonModels.slice(0, 2).join(" and ")} and more — fast, by a trusted local team.`,
     path: `/brands/${brand.slug}`,
   });
 }
@@ -127,8 +127,7 @@ export default async function BrandPage({
           <p>
             Most {brand.name} failures trace back to scale, water quality, or a
             worn component — not a machine that needs replacing. We find the
-            real cause, quote it up front, and back the repair with our 60-day
-            workmanship guarantee.
+            real cause, quote it up front, and fix it right the first time.
           </p>
 
           <p style={{ marginTop: 32 }}>
