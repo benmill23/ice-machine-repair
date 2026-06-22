@@ -70,8 +70,8 @@ export default function Home() {
             </p>
 
             <h1 className="mt-3 text-4xl font-extrabold leading-[1.05] tracking-tight text-ink-900 sm:text-5xl lg:text-[3.3rem]">
-              Commercial Ice Machine Repair in{" "}
-              <span className="u-accent">Nashville</span>
+              <span className="u-accent">Commercial Ice Machine Repair</span> in
+              Nashville
             </h1>
 
             <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-ink-600 lg:mx-0">
